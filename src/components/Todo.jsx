@@ -28,7 +28,7 @@ const handleToggle = (index) => {
 return ( 
     <div style={{
         maxWidth: "500px",
-        width: "100%"
+        width: "100%",
     }}>
         <div style={{
             display: "flex",
@@ -56,7 +56,7 @@ return (
                 left: "20px",
                 border: "10px",
                 borderRadius: "50%",
-                cursor: "pointer"
+                cursor: "pointer",
             }}/>
             <input style={{
                 outline: "none",
@@ -70,12 +70,12 @@ return (
             { todos.map((todo, index) => (
                 <li key={index} style={{
                     background: "black",
-                    width: "100%",
                     color: "white",
                     borderBottom: "1px solid yellow",
-                    padding: "10px 15px"
+                    padding: "10px 15px",
+                    listStyleType: "none",
                 }}>
-                    <input type="checkbox" checked={todo.checked} onChange={() => handleToggle(index)}/>
+                    <input type="checkbox" style={{cursor: "pointer"}} checked={todo.checked} onChange={() => handleToggle(index)}/>
                     <span style={{
                         textDecoration: todo.checked ? "line-through" : "none"  
                     }}>{ todo.text}</span>
