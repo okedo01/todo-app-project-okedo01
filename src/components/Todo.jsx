@@ -14,9 +14,15 @@ const handleSubmit = (e) => {
     e.preventDefault();
     console.log("submitted");
     if(newTodo.trim() !== "") {
-        setTodos([...todos, {text: newTodo.trim()}]);
+        setTodos([...todos, {text: newTodo.trim(), checked: false}]);
     }
     setNewTodo("");
+}
+
+const handleToggle = (index) => {
+    const updatedTodos = [...todos];
+    updatedTodos[index].checked = !updatedTodos[index].checked;
+    setTodos(updatedTodos);
 }
 
 return ( 
@@ -62,10 +68,17 @@ return (
 
         <ul>
             { todos.map((todo, index) => (
-                <li key={index}>
-                    <input type="checkbox" />
-                    <span>{ todo.text}</span>
-                    <button>DELETE</button>
+                <li key={index} style={{
+                    background: "black",
+                    width: "100%",
+                    color: "white",
+                    borderBottom: "1px solid yellow",
+                    padding: "10px 15px"
+                }}>
+                    <input type="checkbox" checked={todo.checked} onChange={() => handleToggle(index)}/>
+                    <span style={{
+                        textDecoration: todo.checked ? "line-through" : "none"  
+                    }}>{ todo.text}</span>
                 </li>
             ))}
         </ul>
