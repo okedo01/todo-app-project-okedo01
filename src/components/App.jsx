@@ -4,7 +4,7 @@ import bgImg from "../assets/images/bg-desktop-dark.jpg"
 function App() {
 
   return (
-    <div style={{
+     <div style={{
       backgroundImage: `url(${bgImg})`,
       margin: 0,
       padding: 0,

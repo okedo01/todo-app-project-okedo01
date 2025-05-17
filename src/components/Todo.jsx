@@ -48,7 +48,7 @@ return (
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            position: "relative"
+            position: "relative",
         }}>
             <input type="checkbox" style={{
                 position: "absolute",
@@ -66,14 +66,16 @@ return (
             }} type="text" placeholder="Create a new todo..." value={newTodo} onChange={handleInput} />
         </form>
 
-        <ul>
+        <ul style={{background: "black",}}>
             { todos.map((todo, index) => (
                 <li key={index} style={{
-                    background: "black",
                     color: "white",
                     borderBottom: "1px solid yellow",
-                    padding: "10px 15px",
+                    padding: "10px",
                     listStyleType: "none",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px"
                 }}>
                     <input type="checkbox" style={{cursor: "pointer"}} checked={todo.checked} onChange={() => handleToggle(index)}/>
                     <span style={{
@@ -81,8 +83,20 @@ return (
                     }}>{ todo.text}</span>
                 </li>
             ))}
+                <div style={{
+                color: "white",
+                display: "flex",
+                justifyContent: "space-between",
+
+            }}>
+                <p><span></span>items left</p>
+                <p>All</p>
+                <p>Active</p>
+                <p>Completed</p>
+                <p>Clear Completed</p>
+            </div>
         </ul>
-        
+       
     </div>
     );
 }
