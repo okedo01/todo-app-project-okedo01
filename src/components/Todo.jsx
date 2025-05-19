@@ -25,7 +25,10 @@ const handleToggle = (index) => {
     setTodos(updatedTodos);
 }
 
-
+const handleClearCompleted = () => {
+    const clearTodo = todos.filter((todo) => !todo.checked);
+    setTodos(clearTodo);
+}
 
 return ( 
     <div style={{
