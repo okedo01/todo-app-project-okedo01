@@ -109,17 +109,17 @@ return (
                 <p>{clearItems} items left</p>
                 <p style={{
                     cursor: "pointer",
-                    color: "yellow",
+                    color: filter === "All" ? "blue" : "white",
                     fontWeight: filter === "All" ? "bold" : "normal"
                 }} onClick={() => setFilter("All")}>All</p>
                 <p style={{
                     cursor: "pointer",
-                    color: "red",
+                    color: filter === "Active" ? "blue" : "white",
                     fontWeight: filter === "Active" ? "bold" : "normal"
                 }} onClick={() => setFilter("Active")}>Active</p>
                 <p style={{
                     cursor: "pointer",
-                    color: "green",
+                    color: filter === "Completed" ? "blue" : "white",
                     fontWeight: filter === "Completed" ? "bold" : "normal"
                 }} onClick={() => setFilter("Completed")}>Completed</p>
                 <p style={{cursor: "pointer",}} onClick={handleClearCompleted}>Clear Completed</p>
