@@ -15,8 +15,8 @@ const handleSubmit = (e) => {
     console.log("submitted");
     if(newTodo.trim() !== "") {
         setTodos([...todos, {text: newTodo.trim(), checked: false}]);
+        setNewTodo("");
     }
-    setNewTodo("");
 }
 
 const handleToggle = (index) => {
@@ -29,6 +29,9 @@ const handleClearCompleted = () => {
     const clearTodo = todos.filter((todo) => !todo.checked);
     setTodos(clearTodo);
 }
+
+const clearItems = todos.filter((todo) => !todo.checked).length;
+
 
 return ( 
     <div style={{
@@ -94,7 +97,8 @@ return (
                 justifyContent: "space-between",
 
             }}>
-                <p><span style={{paddingRight: "5px"}}></span>items left</p>
+                {/* <p><span style={{paddingRight: "5px"}}>{clearItems}</span>items left</p> */}
+                <p>{clearItems} item{clearItems !== 1 ? "s" : ""} left</p>
                 <p>All</p>
                 <p>Active</p>
                 <p><span style={{paddingRight: "5px"}}>{todos.length}</span>Completed</p>
