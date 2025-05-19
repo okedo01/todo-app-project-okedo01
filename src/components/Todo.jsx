@@ -5,6 +5,7 @@ import darkTheme from "../assets/images/bg-desktop-dark.jpg"
 const Todo = () => {
     const [newTodo, setNewTodo] = useState("");
     const [todos, setTodos] = useState([]);
+    const [filter, setFilter] = useState("All");
 
 const handleInput = (e) => {
     setNewTodo(e.target.value)
@@ -31,6 +32,14 @@ const handleClearCompleted = () => {
 }
 
 const clearItems = todos.filter((todo) => !todo.checked).length;
+
+const filteredTodo = todos.filter((todo) => {
+    if(filter === "Active") return !todo.checked;
+     
+    if (filter === "Completed") return todo.checked;
+    
+        return true;
+})
 
 
 return ( 
@@ -75,7 +84,7 @@ return (
         </form>
 
         <ul style={{background: "black",}}>
-            { todos.map((todo, index) => (
+            { filteredTodo.map((todo, index) => (
                 <li key={index} style={{
                     color: "white",
                     borderBottom: "1px solid yellow",
@@ -97,11 +106,22 @@ return (
                 justifyContent: "space-between",
 
             }}>
-                {/* <p><span style={{paddingRight: "5px"}}>{clearItems}</span>items left</p> */}
-                <p>{clearItems} item{clearItems !== 1 ? "s" : ""} left</p>
-                <p>All</p>
-                <p>Active</p>
-                <p><span style={{paddingRight: "5px"}}>{todos.length}</span>Completed</p>
+                <p>{clearItems} items left</p>
+                <p style={{
+                    cursor: "pointer",
+                    color: "yellow",
+                    fontWeight: filter === "All" ? "bold" : "normal"
+                }} onClick={() => setFilter("All")}>All</p>
+                <p style={{
+                    cursor: "pointer",
+                    color: "red",
+                    fontWeight: filter === "Active" ? "bold" : "normal"
+                }} onClick={() => setFilter("Active")}>Active</p>
+                <p style={{
+                    cursor: "pointer",
+                    color: "green",
+                    fontWeight: filter === "Completed" ? "bold" : "normal"
+                }} onClick={() => setFilter("Completed")}>Completed</p>
                 <p style={{cursor: "pointer",}} onClick={handleClearCompleted}>Clear Completed</p>
             </div>
         </ul>
