@@ -25,6 +25,8 @@ const handleToggle = (index) => {
     setTodos(updatedTodos);
 }
 
+
+
 return ( 
     <div style={{
         maxWidth: "500px",
@@ -89,11 +91,11 @@ return (
                 justifyContent: "space-between",
 
             }}>
-                <p><span></span>items left</p>
+                <p><span style={{paddingRight: "5px"}}></span>items left</p>
                 <p>All</p>
                 <p>Active</p>
-                <p>Completed</p>
-                <p>Clear Completed</p>
+                <p><span style={{paddingRight: "5px"}}>{todos.length}</span>Completed</p>
+                <p style={{cursor: "pointer",}} onClick={handleClearCompleted}>Clear Completed</p>
             </div>
         </ul>
        
