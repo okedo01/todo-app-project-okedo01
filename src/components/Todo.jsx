@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import darkIcon from "../assets/images/icon-sun.svg"
 import lightIcon from "../assets/images/icon-moon.svg"
 import darkTheme from "../assets/images/bg-desktop-dark.jpg"
+import lightTheme from "../assets/images/bg-desktop-light.jpg";
 
 const Todo = () => {
     const [newTodo, setNewTodo] = useState("");
@@ -47,9 +48,8 @@ const handleToggleTheme = () => {
     setIsDarkMode(!isDarkMode);
 }
 
-const bgImage = isDarkMode 
-    ? "url(../assets/images/bg-desktop-dark.jpg)"
-    : "url(../assets/images/bg-desktop-light.jpg)"
+const bgImage = `url(${isDarkMode ? darkTheme : lightTheme})`;
+
 
 return ( 
     <div style={{
@@ -57,7 +57,6 @@ return (
         width: "100%",
         backgroundImage: bgImage,
         backgroundSize: "cover",
-        transition: "background-image 0.5s ease",
     }}>
         <div style={{
             display: "flex",
