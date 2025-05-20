@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import darkIcon from "../assets/images/icon-sun.svg"
+import lightIcon from "../assets/images/icon-moon.svg"
 import darkTheme from "../assets/images/bg-desktop-dark.jpg"
 
 const Todo = () => {
     const [newTodo, setNewTodo] = useState("");
     const [todos, setTodos] = useState([]);
     const [filter, setFilter] = useState("All");
+    const [isDarkMode, setIsDarkMode] = useState(true);
 
 const handleInput = (e) => {
     setNewTodo(e.target.value)
@@ -41,11 +43,21 @@ const filteredTodo = todos.filter((todo) => {
         return true;
 })
 
+const handleToggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+}
+
+const bgImage = isDarkMode 
+    ? "url(../assets/images/bg-desktop-dark.jpg)"
+    : "url(../assets/images/bg-desktop-light.jpg)"
 
 return ( 
     <div style={{
         maxWidth: "500px",
         width: "100%",
+        backgroundImage: bgImage,
+        backgroundSize: "cover",
+        transition: "background-image 0.5s ease",
     }}>
         <div style={{
             display: "flex",
@@ -57,7 +69,11 @@ return (
             <h1 style={{
                 color: "white"
             }}>TODO</h1>
-            <img src={darkIcon} />
+            <img
+                src={isDarkMode ? darkIcon : lightIcon}
+                onClick={handleToggleTheme}
+                style={{cursor: "pointer"}}
+            />
         </div>
         <form onSubmit={handleSubmit} style={{
             background: "",
