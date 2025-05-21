@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import darkIcon from "../assets/images/icon-sun.svg"
 import lightIcon from "../assets/images/icon-moon.svg"
-import darkTheme from "../assets/images/bg-desktop-dark.jpg"
-import lightTheme from "../assets/images/bg-desktop-light.jpg";
 
 const Todo = ({isDarkMode, handleToggleTheme}) => {
     const [newTodo, setNewTodo] = useState("");
@@ -43,14 +41,10 @@ const filteredTodo = todos.filter((todo) => {
         return true;
 })
 
-const bgImage = `url(${isDarkMode ? darkTheme : lightTheme})`;
-
-
 return ( 
     <div style={{
         maxWidth: "500px",
         width: "100%",
-        backgroundImage: bgImage,
         backgroundSize: "cover",
     }}>
         <div style={{
@@ -61,7 +55,7 @@ return (
             marginBottom: "70px"
         }}>
             <h1 style={{
-                color: "white"
+                color: isDarkMode ? "white" : "black",
             }}>TODO</h1>
             <img
                 src={isDarkMode ? darkIcon : lightIcon}

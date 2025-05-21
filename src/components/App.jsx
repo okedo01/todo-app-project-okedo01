@@ -1,6 +1,7 @@
 import Todo from "./todo"
-import bgImg from "../assets/images/bg-desktop-dark.jpg"
-import "../App.css"
+import darkTheme from "../assets/images/bg-desktop-dark.jpg"
+import lightTheme from "../assets/images/bg-desktop-light.jpg"
+// import "../App.css"
 import { useState } from "react"
 
 function App() {
@@ -10,16 +11,16 @@ function App() {
     setIsDarkMode(!isDarkMode);
   }
 
+  const appStyle = {
+    backgroundImage: `url(${isDarkMode ? lightTheme : darkTheme})`,
+    margin: 0,
+    padding: 0,
+    boxSizing: "border-box",
+    display: "grid",
+    placeItems: "center",
+  }
   return (
-     <div style={{
-      backgroundImage: `url(${bgImg})`,
-      margin: 0,
-      padding: 0,
-      boxSizing: "border-box",
-      height: "200px",
-      display: "grid",
-      placeItems: "center",
-    }}>
+     <div style={appStyle}>
        <Todo isDarkMode = {isDarkMode} handleToggleTheme = {handleToggleTheme} />
     </div>
   )
