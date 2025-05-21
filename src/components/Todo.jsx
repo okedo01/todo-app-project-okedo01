@@ -4,11 +4,10 @@ import lightIcon from "../assets/images/icon-moon.svg"
 import darkTheme from "../assets/images/bg-desktop-dark.jpg"
 import lightTheme from "../assets/images/bg-desktop-light.jpg";
 
-const Todo = () => {
+const Todo = ({isDarkMode, handleToggleTheme}) => {
     const [newTodo, setNewTodo] = useState("");
     const [todos, setTodos] = useState([]);
     const [filter, setFilter] = useState("All");
-    const [isDarkMode, setIsDarkMode] = useState(true);
 
 const handleInput = (e) => {
     setNewTodo(e.target.value)
@@ -43,10 +42,6 @@ const filteredTodo = todos.filter((todo) => {
     
         return true;
 })
-
-const handleToggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-}
 
 const bgImage = `url(${isDarkMode ? darkTheme : lightTheme})`;
 
