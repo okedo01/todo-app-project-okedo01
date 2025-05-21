@@ -43,60 +43,62 @@ const filteredTodo = todos.filter((todo) => {
 
 return ( 
     <div style={{
-        maxWidth: "500px",
+        maxWidth: "400px",
         width: "100%",
-        backgroundSize: "cover",
     }}>
         <div style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            width: "100%",
-            marginBottom: "70px"
+            marginTop: "20px",
         }}>
             <h1 style={{
-                color: isDarkMode ? "white" : "black",
+                color: "hsl(0, 0%, 98%)",
             }}>TODO</h1>
             <img
-                src={isDarkMode ? darkIcon : lightIcon}
+                src={isDarkMode ? lightIcon : darkIcon}
                 onClick={handleToggleTheme}
                 style={{cursor: "pointer"}}
             />
         </div>
         <form onSubmit={handleSubmit} style={{
-            background: "",
             padding: "5px 10px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             position: "relative",
+            backgroundColor: isDarkMode ? "white" : "hsl(235, 19%, 35%)",
+            borderRadius: "3px",
         }}>
             <input type="checkbox" style={{
                 position: "absolute",
-                top: "13px",
+                top: "10px",
                 left: "20px",
-                border: "10px",
-                borderRadius: "50%",
                 cursor: "pointer",
             }}/>
             <input style={{
                 outline: "none",
-                width: "100%",
-                padding: "7px 35px",
+                padding: "5px 35px",
                 fontSize: "16px",
+                width: "100%",
+                backgroundColor: isDarkMode ? "white" : "hsl(235, 19%, 35%)",
+                color: isDarkMode ? "black" : "hsl(0, 0%, 98%)",
+                border: "none"
             }} type="text" placeholder="Create a new todo..." value={newTodo} onChange={handleInput} />
         </form>
 
-        <ul style={{background: "black",}}>
+        <ul style={{ 
+            backgroundColor: isDarkMode ? "white" : "hsl(235, 19%, 35%)",
+            }}>
             { filteredTodo.map((todo, index) => (
                 <li key={index} style={{
-                    color: "white",
-                    borderBottom: "1px solid yellow",
+                    color: isDarkMode ? "black" : "hsl(0, 0%, 98%)",
+                    borderBottom: "1px solid hsl(235, 21%, 11%)",
                     padding: "10px",
                     listStyleType: "none",
                     display: "flex",
                     alignItems: "center",
-                    gap: "5px"
+                    gap: "5px",
                 }}>
                     <input type="checkbox" style={{cursor: "pointer"}} checked={todo.checked} onChange={() => handleToggle(index)}/>
                     <span style={{
@@ -105,25 +107,25 @@ return (
                 </li>
             ))}
                 <div style={{
-                color: "white",
                 display: "flex",
                 justifyContent: "space-between",
-
+                color: "hsl(235, 21%, 11%)",
+                fontSize: "12px"
             }}>
                 <p>{clearItems} items left</p>
                 <p style={{
                     cursor: "pointer",
-                    color: filter === "All" ? "blue" : "white",
+                    color: filter === "All" ? "hsl(220, 98%, 61%)" : "hsl(235, 21%, 11%)",
                     fontWeight: filter === "All" ? "bold" : "normal"
                 }} onClick={() => setFilter("All")}>All</p>
                 <p style={{
                     cursor: "pointer",
-                    color: filter === "Active" ? "blue" : "white",
+                    color: filter === "Active" ? "hsl(220, 98%, 61%)" : "hsl(235, 21%, 11%)",
                     fontWeight: filter === "Active" ? "bold" : "normal"
                 }} onClick={() => setFilter("Active")}>Active</p>
                 <p style={{
                     cursor: "pointer",
-                    color: filter === "Completed" ? "blue" : "white",
+                    color: filter === "Completed" ? "hsl(220, 98%, 61%)" : "hsl(235, 21%, 11%)",
                     fontWeight: filter === "Completed" ? "bold" : "normal"
                 }} onClick={() => setFilter("Completed")}>Completed</p>
                 <p style={{cursor: "pointer",}} onClick={handleClearCompleted}>Clear Completed</p>
