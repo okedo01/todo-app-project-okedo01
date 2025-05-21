@@ -1,8 +1,8 @@
 import Todo from "./todo"
 import darkTheme from "../assets/images/bg-desktop-dark.jpg"
 import lightTheme from "../assets/images/bg-desktop-light.jpg"
-// import "../App.css"
-import { useState } from "react"
+import "../App.css"
+import { useEffect, useState } from "react"
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -11,11 +11,12 @@ function App() {
     setIsDarkMode(!isDarkMode);
   }
 
+  useEffect(() => {
+    document.body.style.backgroundColor = isDarkMode ? "white" : "black" ;
+  }, [isDarkMode])
+
   const appStyle = {
     backgroundImage: `url(${isDarkMode ? lightTheme : darkTheme})`,
-    margin: 0,
-    padding: 0,
-    boxSizing: "border-box",
     display: "grid",
     placeItems: "center",
   }
