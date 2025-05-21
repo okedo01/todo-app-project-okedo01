@@ -89,13 +89,14 @@ return (
 
         <ul style={{ 
             backgroundColor: isDarkMode ? "white" : "hsl(235, 19%, 35%)",
+            padding: 0,
             }}>
             { filteredTodo.map((todo, index) => (
                 <li key={index} style={{
                     color: isDarkMode ? "black" : "hsl(0, 0%, 98%)",
                     borderBottom: "1px solid hsl(235, 21%, 11%)",
                     padding: "10px",
-                    listStyleType: "none",
+                    listStyle: "none",
                     display: "flex",
                     alignItems: "center",
                     gap: "5px",
