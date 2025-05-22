@@ -109,7 +109,6 @@ return (
             ))}
                 <div style={{
                 display: "flex",
-                flexWrap: "nowrap",
                 justifyContent: "space-between",
                 color: "hsl(235, 21%, 11%)",
                 fontSize: "12px"
