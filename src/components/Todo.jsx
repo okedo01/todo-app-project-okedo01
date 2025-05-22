@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import darkIcon from "../assets/images/icon-sun.svg"
 import lightIcon from "../assets/images/icon-moon.svg"
+import "../index.css"
 
 const Todo = ({isDarkMode, handleToggleTheme}) => {
     const [newTodo, setNewTodo] = useState("");
@@ -64,15 +65,13 @@ return (
         <form onSubmit={handleSubmit} style={{
             padding: "5px 10px",
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
             position: "relative",
             backgroundColor: isDarkMode ? "white" : "hsl(235, 19%, 35%)",
             borderRadius: "3px",
         }}>
-            <input type="checkbox" style={{
+            <input type="checkbox" className="checkbox" style={{
                 position: "absolute",
-                top: "10px",
+                top: "8px",
                 left: "20px",
                 cursor: "pointer",
             }}/>
@@ -101,7 +100,7 @@ return (
                     alignItems: "center",
                     gap: "5px",
                 }}>
-                    <input type="checkbox" style={{cursor: "pointer", width: "20px", height: "18px"}} checked={todo.checked} onChange={() => handleToggle(index)}/>
+                    <input type="checkbox" className="checkbox" style={{backgroundColor: todo.checked ? " hsl(280, 87%, 65%)" : ""}} checked={todo.checked} onChange={() => handleToggle(index)}/>
                     <span style={{
                         textDecoration: todo.checked ? "line-through" : "none"  
                     }}>{ todo.text}</span>
