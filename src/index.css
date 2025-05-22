@@ -1,8 +1,7 @@
-.checkbox {
+.custom-checkbox {
   cursor: pointer;
   width: 15px; 
   height: 15px;
-  border: 1px solid black;
   border-radius: 50%;
   appearance: none;
   -webkit-appearance: none;

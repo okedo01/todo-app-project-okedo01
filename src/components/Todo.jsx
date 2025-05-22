@@ -69,11 +69,12 @@ return (
             backgroundColor: isDarkMode ? "white" : "hsl(235, 19%, 35%)",
             borderRadius: "3px",
         }}>
-            <input type="checkbox" className="checkbox" style={{
+            <input type="checkbox" className="custom-checkbox" style={{
                 position: "absolute",
                 top: "8px",
                 left: "20px",
                 cursor: "pointer",
+                backgroundColor: "transparent", border: isDarkMode ? "1px solid wheat" : "1px solid hsl(237, 14%, 26%)"
             }}/>
             <input style={{
                 outline: "none",
@@ -100,7 +101,7 @@ return (
                     alignItems: "center",
                     gap: "5px",
                 }}>
-                    <input type="checkbox" className="checkbox" style={{backgroundColor: todo.checked ? " hsl(280, 87%, 65%)" : ""}} checked={todo.checked} onChange={() => handleToggle(index)}/>
+                    <input type="checkbox" className="custom-checkbox" style={{backgroundColor: todo.checked ? "hsl(220, 98%, 61%)" : "", border: isDarkMode ? "1px solid wheat" : "1px solid hsl(237, 14%, 26%)"}} checked={todo.checked} onChange={() => handleToggle(index)}/>
                     <span style={{
                         textDecoration: todo.checked ? "line-through" : "none"  
                     }}>{ todo.text}</span>
