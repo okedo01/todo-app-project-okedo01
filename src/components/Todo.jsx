@@ -89,7 +89,7 @@ return (
 
         <ul style={{ 
             backgroundColor: isDarkMode ? "white" : "hsl(235, 19%, 35%)",
-            padding: 0,
+            padding: "0 10px",
             }}>
             { filteredTodo.map((todo, index) => (
                 <li key={index} style={{
@@ -101,7 +101,7 @@ return (
                     alignItems: "center",
                     gap: "5px",
                 }}>
-                    <input type="checkbox" style={{cursor: "pointer"}} checked={todo.checked} onChange={() => handleToggle(index)}/>
+                    <input type="checkbox" style={{cursor: "pointer", width: "20px", height: "18px"}} checked={todo.checked} onChange={() => handleToggle(index)}/>
                     <span style={{
                         textDecoration: todo.checked ? "line-through" : "none"  
                     }}>{ todo.text}</span>
