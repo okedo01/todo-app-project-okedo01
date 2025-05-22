@@ -109,12 +109,14 @@ return (
             ))}
                 <div style={{
                 display: "flex",
+                flexWrap: "nowrap",
                 justifyContent: "space-between",
                 color: "hsl(235, 21%, 11%)",
                 fontSize: "12px"
             }}>
                 <p>{clearItems} items left</p>
-                <p style={{
+                <div className="unyama">
+                    <p style={{
                     cursor: "pointer",
                     color: filter === "All" ? "hsl(220, 98%, 61%)" : "hsl(235, 21%, 11%)",
                     fontWeight: filter === "All" ? "bold" : "normal"
@@ -129,6 +131,7 @@ return (
                     color: filter === "Completed" ? "hsl(220, 98%, 61%)" : "hsl(235, 21%, 11%)",
                     fontWeight: filter === "Completed" ? "bold" : "normal"
                 }} onClick={() => setFilter("Completed")}>Completed</p>
+                </div>
                 <p style={{cursor: "pointer",}} onClick={handleClearCompleted}>Clear Completed</p>
             </div>
         </ul>
