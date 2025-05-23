@@ -81,19 +81,19 @@ return (
                 padding: "5px 35px",
                 fontSize: "16px",
                 width: "100%",
-                backgroundColor: isDarkMode ? "white" : "hsl(235, 19%, 35%)",
-                color: isDarkMode ? "black" : "hsl(0, 0%, 98%)",
+                backgroundColor: isDarkMode ? "hsl(0, 0%, 98%)" : "hsl(235, 19%, 35%)",
+                color: isDarkMode ? "hsl(235, 21%, 11%)" : "hsl(0, 0%, 98%)",
                 border: "none"
             }} type="text" placeholder="Create a new todo..." value={newTodo} onChange={handleInput} />
         </form>
 
         <ul style={{ 
-            backgroundColor: isDarkMode ? "white" : "hsl(235, 19%, 35%)",
+            backgroundColor: isDarkMode ? "hsl(0, 0%, 98%)" : "hsl(235, 19%, 35%)",
             padding: "0 10px",
             }}>
             { filteredTodo.map((todo, index) => (
                 <li key={index} style={{
-                    color: isDarkMode ? "black" : "hsl(0, 0%, 98%)",
+                    color: isDarkMode ? "hsl(235, 21%, 11%)" : "hsl(0, 0%, 98%)",
                     borderBottom: "1px solid hsl(235, 21%, 11%)",
                     padding: "10px",
                     listStyle: "none",
