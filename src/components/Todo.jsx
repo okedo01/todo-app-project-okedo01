@@ -87,9 +87,8 @@ return (
             }} type="text" placeholder="Create a new todo..." value={newTodo} onChange={handleInput} />
         </form>
 
-        <ul style={{ 
+        <ul className="ordered-list" style={{ 
             backgroundColor: isDarkMode ? "hsl(0, 0%, 98%)" : "hsl(235, 19%, 35%)",
-            padding: "0 10px",
             }}>
             { filteredTodo.map((todo, index) => (
                 <li key={index} style={{
