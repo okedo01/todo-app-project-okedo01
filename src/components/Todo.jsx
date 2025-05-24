@@ -107,12 +107,7 @@ return (
                     }}>{ todo.text}</span>
                 </li>
             ))}
-                <div style={{
-                display: "flex",
-                justifyContent: "space-between",
-                color: "hsl(235, 21%, 11%)",
-                fontSize: "12px"
-            }}>
+                <div className="info">
                 <p>{clearItems} items left</p>
                 <div className="unyama">
                     <p style={{

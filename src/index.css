@@ -16,3 +16,21 @@
   width: 100%;
   gap: 0 10px;
 }
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  position: relative;
+}
+
+@media screen and (max-width: 375px) {
+  .info {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+  }
+  .unyama {
+  position: absolute;
+  top: 20px;
+}
+}
