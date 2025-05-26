@@ -43,7 +43,7 @@ const filteredTodo = todos.filter((todo) => {
 })
 
 return ( 
-    <div className="wrapper">
+    <div className="todo-container">
         <div style={{
             display: "flex",
             justifyContent: "space-between",
@@ -106,7 +106,7 @@ return (
             ))}
                 <div className="info">
                 <p className="start">{clearItems} items left</p>
-                <div className="unyama">
+                <div className="wrapper">
                     <p style={{
                     cursor: "pointer",
                     color: filter === "All" ? "hsl(220, 98%, 61%)" : "hsl(235, 21%, 11%)",

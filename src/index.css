@@ -1,6 +1,12 @@
-.wrapper {
+body {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.todo-container {
   max-width: 400px;
   width: 100%;
+  font-size: 12px;
 }
 
 .ordered-list {
@@ -17,7 +23,7 @@
   -webkit-appearance: none;
 }
 
-.unyama {
+.wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,19 +41,19 @@
 }
 
 @media screen and (max-width: 375px) {
-  .wrapper {
+  .todo-container {
   max-width: 300px;
 }
   .ordered-list {
     font-size: 16px;
-    /* padding: 5px 0; */
+    padding: 0;
   }
   .info {
   height: 40px;
   font-size: 10px;
   padding: 0 20px;
 }
-  .unyama {
+  .wrapper {
   position: absolute;
   top: 37px;
   right: 0;
@@ -57,7 +63,8 @@
   margin: 15px 0;
   padding: 3px 15px;
   background-color: gray;
-  /* max-width: 26.5em; */
+  max-width: 27em;
+  width: 100%;
   border-radius: 5px;
 }
 .start {
