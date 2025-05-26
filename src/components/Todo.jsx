@@ -43,10 +43,7 @@ const filteredTodo = todos.filter((todo) => {
 })
 
 return ( 
-    <div style={{
-        maxWidth: "400px",
-        width: "100%",
-    }}>
+    <div className="wrapper">
         <div style={{
             display: "flex",
             justifyContent: "space-between",
