@@ -33,13 +33,15 @@
     padding: 10px 0;
   }
   .info {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-  }
+  height: 20px;
+}
   .unyama {
   position: absolute;
   top: 20px;
   justify-content: center;
-  padding: 0 40px;
+  margin: 15px auto;
+  padding: 0 20px;
+  background-color: gray;
+  max-width: 27.3em;
 }
 }
