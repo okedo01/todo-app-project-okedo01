@@ -42,10 +42,10 @@ body {
 
 @media screen and (max-width: 375px) {
   .todo-container {
-  max-width: 300px;
+  max-width: 320px;
 }
   .ordered-list {
-    font-size: 16px;
+    font-size: 12px;
     padding: 0;
   }
   .info {
@@ -63,8 +63,7 @@ body {
   margin: 15px 0;
   padding: 3px 15px;
   background-color: gray;
-  max-width: 27em;
-  width: 100%;
+  max-width: 29em;
   border-radius: 5px;
 }
 .start {
