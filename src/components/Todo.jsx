@@ -105,7 +105,7 @@ return (
                 </li>
             ))}
                 <div className="info">
-                <p>{clearItems} items left</p>
+                <p className="start">{clearItems} items left</p>
                 <div className="unyama">
                     <p style={{
                     cursor: "pointer",
@@ -123,7 +123,7 @@ return (
                     fontWeight: filter === "Completed" ? "bold" : "normal"
                 }} onClick={() => setFilter("Completed")}>Completed</p>
                 </div>
-                <p style={{cursor: "pointer",}} onClick={handleClearCompleted}>Clear Completed</p>
+                <p className="start" style={{cursor: "pointer",}} onClick={handleClearCompleted}>Clear Completed</p>
             </div>
         </ul>
        

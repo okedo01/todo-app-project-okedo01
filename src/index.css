@@ -39,24 +39,30 @@
   max-width: 300px;
 }
   .ordered-list {
-    padding: 10px 0;
+    font-size: 16px;
+    /* padding: 5px 0; */
   }
   .info {
-  height: 20px;
+  height: 40px;
   font-size: 10px;
   padding: 0 20px;
 }
   .unyama {
   position: absolute;
-  top: 20px;
+  top: 37px;
   right: 0;
   left: 0;
   justify-content: center;
   gap: 0 15px;
-  margin: 15px auto;
-  padding: 3px 20px;
+  margin: 15px 0;
+  padding: 3px 15px;
   background-color: gray;
-  max-width: 26em;
+  /* max-width: 26.5em; */
   border-radius: 5px;
+}
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 }
