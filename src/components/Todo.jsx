@@ -52,6 +52,7 @@ return (
         }}>
             <h1 style={{
                 color: "hsl(0, 0%, 98%)",
+                fontSize: "24px"
             }}>TODO</h1>
             <img
                 src={isDarkMode ? lightIcon : darkIcon}
