@@ -23,6 +23,13 @@ body {
   -webkit-appearance: none;
 }
 
+.search {
+  outline: none;
+  padding: 5px 35px;
+  font-size: 16px;
+  width: 100%;
+}
+
 .wrapper {
   display: flex;
   justify-content: space-between;
@@ -61,7 +68,7 @@ body {
   justify-content: center;
   gap: 0 15px;
   margin: 15px 0;
-  padding: 3px 15px;
+  padding: 5px 15px;
   background-color: gray;
   max-width: 29em;
   border-radius: 5px;

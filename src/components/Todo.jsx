@@ -74,11 +74,7 @@ return (
                 cursor: "pointer",
                 backgroundColor: "transparent", border: isDarkMode ? "1px solid wheat" : "1px solid hsl(237, 14%, 26%)"
             }}/>
-            <input style={{
-                outline: "none",
-                padding: "5px 35px",
-                fontSize: "16px",
-                width: "100%",
+            <input className="search" style={{
                 backgroundColor: isDarkMode ? "hsl(0, 0%, 98%)" : "hsl(235, 19%, 35%)",
                 color: isDarkMode ? "hsl(235, 21%, 11%)" : "hsl(0, 0%, 98%)",
                 border: "none"
