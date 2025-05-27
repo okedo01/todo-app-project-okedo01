@@ -14,7 +14,6 @@ const handleInput = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submitted");
     if(newTodo.trim() !== "") {
         setTodos([...todos, {text: newTodo.trim(), checked: false}]);
         setNewTodo("");
@@ -118,7 +117,6 @@ return (
                 <p className="start" style={{cursor: "pointer",}} onClick={handleClearCompleted}>Clear Completed</p>
             </div>
         </ul>
-       
     </div>
     );
 }

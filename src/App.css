@@ -6,3 +6,16 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: "border-box";
 }
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 12px 20px;
+    color: hsl(0, 2%, 59%);
+}
+
+.copyright a {
+    color: hsl(280, 87%, 65%);
+    text-decoration: none;
+}

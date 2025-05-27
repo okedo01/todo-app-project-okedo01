@@ -24,6 +24,9 @@ function App() {
   return (
      <div style={appStyle}>
        <Todo isDarkMode = {isDarkMode} handleToggleTheme = {handleToggleTheme} />
+       <div className="copyright">
+        <footer>Created by <a href="https://github.com/okedo01/todo-app-project-okedo01" target="_blank">Eliah</a> &copy;right 2025</footer>
+       </div>
     </div>
   )
 }
