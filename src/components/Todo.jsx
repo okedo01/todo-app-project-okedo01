@@ -61,11 +61,7 @@ return (
             />
         </div>
         <form onSubmit={handleSubmit} style={{
-            padding: "5px 10px",
-            display: "flex",
-            position: "relative",
             backgroundColor: isDarkMode ? "white" : "hsl(235, 19%, 35%)",
-            borderRadius: "3px",
         }}>
             <input type="checkbox" className="custom-checkbox" style={{
                 position: "absolute",
