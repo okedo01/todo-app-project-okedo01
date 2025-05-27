@@ -1,4 +1,4 @@
-import Todo from "./todo"
+import Todo from "./TodoApp"
 import darkTheme from "../assets/images/bg-desktop-dark.jpg"
 import lightTheme from "../assets/images/bg-desktop-light.jpg"
 import "../App.css"
