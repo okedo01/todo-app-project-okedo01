@@ -3,7 +3,7 @@ import darkIcon from "../assets/images/icon-sun.svg"
 import lightIcon from "../assets/images/icon-moon.svg"
 import "../index.css"
 
-const TodoTemp = ({isDarkMode, handleToggleTheme}) => {
+const Todo = ({isDarkMode, handleToggleTheme}) => {
     const [newTodo, setNewTodo] = useState("");
     const [todos, setTodos] = useState([]);
     const [filter, setFilter] = useState("All");
@@ -123,4 +123,4 @@ return (
     );
 }
  
-export default TodoTemp;
+export default Todo;

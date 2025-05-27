@@ -1,4 +1,4 @@
-import Todo from "./TodoTemp"
+import Todo from "./todo"
 import darkTheme from "../assets/images/bg-desktop-dark.jpg"
 import lightTheme from "../assets/images/bg-desktop-light.jpg"
 import "../App.css"
@@ -23,7 +23,7 @@ function App() {
   }
   return (
      <div style={appStyle}>
-       <TodoTemp isDarkMode = {isDarkMode} handleToggleTheme = {handleToggleTheme} />
+       <Todo isDarkMode = {isDarkMode} handleToggleTheme = {handleToggleTheme} />
     </div>
   )
 }
