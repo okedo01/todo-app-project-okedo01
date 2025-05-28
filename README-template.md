@@ -24,8 +24,6 @@ Users should be able to:
 - Solution URL: [Add solution URL here](https://github.com/okedo01/todo-app-project-okedo01)
 - Live Site URL: [Add live site URL here](https://todo-app-okedo01.netlify.app/)
 
-## My process
-
 ### Built with
 
 - Semantic HTML5 markup
@@ -36,4 +34,4 @@ Users should be able to:
 ## Author
 
 - Website - [Okedo01](https://github.com/okedo01)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [Okedo01](https://www.frontendmentor.io/profile/yourusername)

@@ -32,6 +32,11 @@ form {
   width: 100%;
 }
 
+.btn {
+  border: none;
+  cursor: pointer;
+}
+
 .wrapper {
   display: flex;
   justify-content: space-between;

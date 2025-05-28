@@ -74,6 +74,7 @@ return (
                 color: isDarkMode ? "hsl(235, 21%, 11%)" : "hsl(0, 0%, 98%)",
                 border: "none"
             }} type="text" placeholder="Create a new todo..." value={newTodo} onChange={handleInput} />
+            <button className="btn" style={{background: "none", color: isDarkMode ? "hsl(235, 21%, 11%)" : "hsl(0, 0%, 98%)",}} onClick={handleSubmit}>Add</button>
         </form>
 
         <ul className="ordered-list" style={{ 
